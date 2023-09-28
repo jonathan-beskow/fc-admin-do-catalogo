@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+}
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('io.vavr:vavr:0.10.4')
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.10.0')
+    testImplementation('org.mockito:mockito-junit-jupiter:5.5.0')
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+}
+
+
+tasks.named("test"){
+    useJUnitPlatform()
+}

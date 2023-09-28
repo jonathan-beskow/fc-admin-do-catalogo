@@ -1,0 +1,15 @@
+plugins {
+    id 'java-conventions'
+    id 'java-library'
+}
+
+group = 'com.fullcycle.admin.catalogo.application'
+
+dependencies {
+    implementation(project(':domain'))
+    testImplementation(project(path: ':domain', configuration: 'testClasses'))
+    //implementation 'io.vavr:vavr:0.10.4'
+    //testImplementation 'org.mockito:mockito-junit-jupiter:4.5.1'
+    //testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    //testImplementation(project(path: ':domain', configuration: 'testClasses'))
+}
